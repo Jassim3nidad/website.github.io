@@ -1,0 +1,716 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* Container Styling */
+#container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styling */
+#header {
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 18px; /* Decreased from 24px to 18px */
+    position: relative;
+}
+
+#header h1 {
+    margin: 0;
+    font-size: 18px; /* Adjusted to make the text smaller */
+}
+
+
+
+/* Navigation Bar Styling */
+nav {
+    background-color: white;
+    border-bottom: 1px solid #ddd; /* Line separating navigation bar from content below */
+    border-top: 1px solid #ddd; /* Line at the top of the navigation bar */
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px; /* Adds space between the header and navigation bar */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centers the items vertically */
+}
+
+nav ul img {
+    width: 40px; /* Adjust this value as needed */
+    height: auto; /* Maintains aspect ratio */
+}
+
+#logo {
+    width: 60px; /* Adjust the width as needed */
+    height: auto; /* Maintains the aspect ratio */
+}
+
+nav ul li {
+    margin: 0 20px; /* Space between items */
+    position: relative; /* Needed for absolute positioning of separators */
+}
+
+nav ul li:not(:last-child)::after {
+    content: ''; /* Empty content for the separator */
+    position: absolute;
+    right: -10px; /* Position to the right of the item */
+    top: 50%; /* Centered vertically */
+    height: 20px; /* Adjust height of the separator */
+    border-right: 1px solid #ddd; /* Line separator */
+    transform: translateY(-50%); /* Center the line with the text */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    display: inline-block; /* Allows margin adjustments */
+    padding: 0 10px; /* Adds space around the text */
+}
+
+nav ul li a i {
+    margin-left: 8px;
+}
+
+/* Main Banner Section */
+
+.banner {
+    position: relative; /* Ensures children can be positioned within this container */
+    text-align: center;
+    background-color: #f0f0f0; /* Background color for the banner */
+}
+
+.banner img {
+    width: 100%;
+    max-width: 1300px;
+    height: auto;
+}
+
+.banner h1, 
+.banner p {
+    position: absolute; /* Allows the elements to be positioned exactly */
+    left: 20px; /* Distance from the left of the banner */
+    color: white; /* Adjust text color as needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for contrast */
+    padding: 10px; /* Padding around the text */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+.banner h1 {
+    font-size: 36px; /* Adjust font size */
+    margin: 0;
+    top: 20px; /* Distance from the top of the banner */
+}
+
+.banner p {
+    margin: 0;
+    font-size: 18px; /* Adjust font size */
+    top: 80px; /* Distance from the top of the banner */
+}
+
+.banner .btn-group {
+    position: absolute;
+    top: 140px; /* Position buttons below the paragraph */
+    left: 20px; /* Align with the text */
+    margin-top: 10px;
+}
+
+.btn-group .btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 5px;
+}
+
+.btn-primary {
+    background-color: #007bff; /* Primary button background color */
+    color: white; /* Primary button text color */
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Secondary button background color */
+    color: white; /* Secondary button text color */
+}
+
+fieldset {
+    background: black;
+    color: white;
+}
+
+
+
+/* Product Sections */
+.section {
+    padding: 50px 20px;
+    background-color: #e9ecef;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.section img {
+    max-width: 200px;
+    margin-bottom: 15px;
+}
+
+.section button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Footer Styling */
+#footer {
+    background-color: #000;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#footer p {
+    font-size: 12px;
+    color: #bbb;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #ddd;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    #header {
+        font-size: 16px;
+    }
+
+    nav ul li {
+        margin: 5px 2px;
+    }
+
+    .banner h1 {
+        font-size: 24px;
+    }
+
+    .banner p {
+        font-size: 14px;
+    }
+
+    .section {
+        padding: 20px 10px;
+    }
+
+    #info-col {
+        width: 90%; /* Ensure it fits within smaller viewports */
+    }
+}
+
+@media (max-width: 480px) {
+    #header {
+        font-size: 14px;
+    }
+
+    nav ul li {
+        margin: 5px 1px;
+    }
+
+    .banner h1 {
+        font-size: 18px;
+    }
+
+    .banner p {
+        font-size: 12px;
+    }
+
+    .section h2 {
+        font-size: 18px;
+    }
+}
+#info-col {
+    position: fixed; /* Sticks it to the side */
+    top: 100px; /* Adjust vertical position */
+    right: 20px; /* Distance from the right edge */
+    width: 220px; /* Width of the info column */
+    background-color: #fffdf7; /* Light off-white background */
+    border-radius: 15px; /* Rounded corners */
+    padding: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    text-align: center;
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    border: 2px solid #ffcc00; /* Yellow border to match the theme */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
+}
+
+#info-col:hover {
+    transform: scale(1.05); /* Slight zoom-in on hover */
+    background-color: #fffae5; /* Slight color change on hover */
+}
+
+#info-col img {
+    width: 100%; /* Responsive image size */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 15px; /* Space between image and text */
+    border-radius: 50%; /* Circular image */
+    border: 3px solid #ffcc00; /* Yellow border around image */
+}
+
+#info-col p {
+    font-size: 16px; /* Readable text size */
+    color: #333; /* Dark color for contrast */
+    margin: 10px 0; /* Space around the text */
+    font-family: 'Roboto', sans-serif; /* Clean, modern font */
+}
+
+#info-col .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #007bff; /* Blue background for the button */
+    color: white; /* White text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded button corners */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+#info-col .cta-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* Container Styling */
+#container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styling */
+#header {
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+#header h1 {
+    margin: 0;
+    font-size: 18px;
+}
+
+/* Navigation Bar Styling */
+nav {
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Scoped styles for the registration form */
+#register-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px); /* Ensures the form container is tall enough to avoid hitting the footer */
+    padding-bottom: 50px; /* Add some padding at the bottom */
+}
+
+#register-form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; 
+    max-width: 600px; 
+    margin: auto;
+    padding: 40px; 
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#register-form-content form {
+    width: 100%;
+}
+
+#register-form-content input[type="text"],
+#register-form-content input[type="password"],
+#register-form-content input[type="email"] {
+    width: calc(100% - 20px);
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+#register-form-content input[type="submit"] {
+    padding: 15px;
+    width: 100%; 
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+#register-form-content input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#footer {
+    background-color: #000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Error Styling */
+.Error {
+    color: red; /* Set text color to red */
+    text-align: center; /* Center the text */
+    margin: 10px 0; /* Add some spacing above and below the error messages */
+}
+
+.Error-container {
+    text-align: center; /* Center the text within the container */
+    margin: 20px 0; /* Add some margin for spacing */
+}
+
+h2, h4 {
+    text-align: center; /* Center headings */
+    font-size: 2rem; /* Increase heading size */
+}
+
+#register-form-content input[type="submit"] {
+    transition: background-color 0.3s ease;
+}
+/* MLB Section */
+.section#MLB {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #fff; /* White background */
+}
+
+.mlb-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.mlb-content h1 {
+    font-size: 3rem; /* Large font for the title */
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.mlb-content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.mlb-image {
+    flex: 1;
+    text-align: right; /* Align image to the right */
+}
+
+.mlb-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: Add rounded corners */
+    object-fit: cover;
+}
+
+.mlb-content .btn {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.mlb-content .btn:hover {
+    background-color: #555;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .section#MLB {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mlb-image {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .mlb-content {
+        padding-right: 0;
+    }
+
+    .mlb-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .mlb-content p {
+        font-size: 1rem;
+    }
+
+    .mlb-content .btn {
+        font-size: 1rem;
+    }
+}
+/* NFL Section */
+.section#NFL {
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    padding: 50px 20px;
+    background-image: url('https://www.neweracap.com.au/cdn/shop/files/NEC_NFL23_TrainingCamp_NEC_3Cap_5950_3930_CHIBEA_SEASEA_SAF49E_ECOM_2400x720_bc0d4f65-e508-4843-8588-4af854012760.jpg?v=1686181006&width=1920');
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the background image */
+    min-height: 400px; /* Ensures enough height */
+    position: relative; /* Needed for absolute positioning of overlay */
+    color: #ffffff; /* Ensures text color contrasts with background */
+}
+
+.nfl-content {
+    background-color: rgba(0, 0, 0, 0.6); /* Adds a semi-transparent black overlay behind the text */
+    padding: 20px;
+    text-align: left; /* Change to left for alignment */
+    border-radius: 8px; /* Rounded corners for the text background */
+    margin-left: -700px; /* Add left margin for further left adjustment */
+}
+
+.nfl-content h1 {
+    font-size: 2.5rem; /* Make the title smaller */
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff; /* Text color */
+}
+
+.nfl-content p {
+    font-size: 1rem; /* Make the paragraph smaller */
+    line-height: 1.5;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+
+.nfl-content .btn {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nfl-content .btn:hover {
+    background-color: #555;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .section#NFL {
+        padding: 30px 10px;
+        min-height: 300px; /* Adjust the height for smaller screens */
+    }
+
+    .nfl-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .nfl-content p {
+        font-size: 1rem;
+    }
+
+    .nfl-content .btn {
+        font-size: 1rem;
+    }
+}
+#footer {
+    background-color: #000;
+    color: white;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-links h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.league-icons {
+    display: flex;
+    justify-content: center;  /* Ensures the icons are centered horizontally */
+    align-items: center;  /* Vertically centers the icons */
+    flex-wrap: wrap;  /* Allows wrapping of icons if they don't fit on one line */
+    gap: 40px;  /* Adjust the spacing between icons */
+}
+
+.league-icons a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Aligns both icon and text in the center */
+    text-decoration: none;
+    margin: 10px;
+    color: white;
+    text-align: center;  /* Ensures text stays centered under the icons */
+}
+
+.league-icons img {
+    width: 50px;  /* Adjust the size of the icons as needed */
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.league-icons span {
+    font-size: 14px;
+    text-align: center;  /* Keeps the text centered under the icon */
+    margin-top: 5px;
+}
+
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.email-signup {
+    flex: 1;
+    text-align: center;
+}
+
+.email-signup input {
+    padding: 10px;
+    margin-right: 5px;
+    width: 200px;
+}
+
+.email-signup button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.about-support {
+    display: flex;
+    justify-content: space-between;
+    flex: 2;
+}
+
+.about, .support {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.about h2, .support h2 {
+    margin-bottom: 10px;
+}
+
+.about a, .support a {
+    display: block;
+    color: white;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+
+.about a:hover, .support a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 30px;  /* Set the width for social media icons */
+    height: auto;
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+p a {
+    color: white;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+#content {
+    padding-bottom: 50px; /* Adjust the value based on your design */
+}
